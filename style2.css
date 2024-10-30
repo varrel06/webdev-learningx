@@ -1,0 +1,66 @@
+/* Styling dasar untuk halaman */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+}
+
+/* Container untuk form login dengan background GIF */
+.login-container {
+    width: 300px;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    background-image: url('gif.1.gif'); /* Ganti dengan path GIF Anda */
+    background-size: cover; /* Membuat GIF menutupi seluruh area */
+    background-position: center;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+    color: white;
+}
+
+.login-container h1 {
+    margin-bottom: 20px;
+}
+
+.login-container input[type="text"],
+.login-container input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.login-container button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 4px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.login-container button:hover {
+    background-color: #45a049;
+}
+
+/* Menambahkan overlay gelap untuk kontras teks */
+.login-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Overlay hitam transparan */
+    border-radius: 8px;
+    z-index: -1;
+}
